@@ -4,41 +4,57 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import kotlinx.android.synthetic.main.activity_main.*
-import net.objecthunter.exp4j.ExpressionBuilder
+
 
 class MainActivity : AppCompatActivity() {
+    private var res: ArrayList<String> = ArrayList()
+    private var sum: String = ""
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        btn_1.setOnClickListener { setTextCalcHead("1") }
-        btn_2.setOnClickListener { setTextCalcHead("2") }
-        btn_3.setOnClickListener { setTextCalcHead("3") }
-        btn_4.setOnClickListener { setTextCalcHead("4") }
-        btn_5.setOnClickListener { setTextCalcHead("5") }
-        btn_6.setOnClickListener { setTextCalcHead("6") }
+        btn_1.setOnClickListener { setTextCalcHead(btn_1.text as String) }
+        btn_2.setOnClickListener { setTextCalcHead(btn_2.text as String) }
+        btn_3.setOnClickListener { setTextCalcHead(btn_3.text as String) }
+        btn_4.setOnClickListener { setTextCalcHead(btn_4.text as String) }
+        btn_5.setOnClickListener { setTextCalcHead(btn_5.text as String) }
+        btn_6.setOnClickListener { setTextCalcHead(btn_6.text as String) }
 
-        btn_sum.setOnClickListener { setTextCalcHead("+") }
+        btn_sum.setOnClickListener {
+            res.add(sum)
+
+            setTextCalcHead(btn_sum.text as String)
+        }
+
+        btn_result.setOnClickListener {
+            var i:Int = 0
+            res.add(sum)
+
+            for (key in res) {
+                i += key.toInt()
+            }
+            sum=i.toString()
+            calc_head.text = i.toString()
+            res.clear()
+        }
+
+
         btn_clean.setOnClickListener {
             val str = calc_head.text.toString()
             if (str.isNotEmpty()) {
                 calc_head.text = str.substring(0, str.length - 1)
             }
         }
-        btn_result.setOnClickListener {
-            try {
-                val ex = ExpressionBuilder(calc_head.text.toString()).build()
-                val result = ex.evaluate()
-                calc_head.text = result.toString()
 
-            } catch (e: Exception) {
-                Log.d("Error:", "${e.message}")
-            }
-        }
     }
 
     private fun setTextCalcHead(str: String) {
-        calc_head.append(str);
+        sum = if (str != "+") sum + str
+        else ""
+
+        calc_head.append(str)
     }
 
 }

@@ -12,11 +12,11 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_marginTop="32dp"
-        android:layout_marginBottom="64dp"
+        android:layout_marginBottom="32dp"
         android:background="#FFFFFF"
         android:ellipsize="start"
         android:gravity="end"
-        android:textSize="72sp"
+        android:textSize="32dp"
         app:layout_constraintBottom_toTopOf="@+id/guideline3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -41,7 +41,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.3" />
+        app:layout_constraintGuide_percent="0.45" />
 
     <Button
         android:id="@+id/btn_1"
@@ -95,14 +95,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.45" />
+        app:layout_constraintGuide_percent="0.60" />
 
     <Button
         android:id="@+id/btn_4"
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="@dimen/btn_layout_marginBottom"
@@ -120,7 +119,6 @@
         android:layout_height="0dp"
         android:layout_marginStart="4dp"
         android:layout_marginLeft="4dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="4dp"
         android:layout_marginRight="4dp"
         android:layout_marginBottom="@dimen/btn_layout_marginBottom"
@@ -138,7 +136,6 @@
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
         android:layout_marginBottom="@dimen/btn_layout_marginBottom"
         android:background="@color/color_btn"
         android:text="6"
@@ -152,14 +149,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.6" />
+        app:layout_constraintGuide_percent="0.75" />
 
     <Button
         android:id="@+id/btn_sum"
         style="@style/Widget.AppCompat.Button.Borderless"
         android:layout_width="0dp"
         android:layout_height="0dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="@dimen/btn_layout_marginBottom"
@@ -177,7 +173,6 @@
         android:layout_height="0dp"
         android:layout_marginStart="4dp"
         android:layout_marginLeft="4dp"
-        android:layout_marginTop="8dp"
         android:layout_marginEnd="4dp"
         android:layout_marginRight="4dp"
         android:layout_marginBottom="@dimen/btn_layout_marginBottom"
@@ -195,7 +190,6 @@
         android:layout_height="0dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
-        android:layout_marginTop="8dp"
         android:layout_marginBottom="@dimen/btn_layout_marginBottom"
         android:background="@color/color_btn"
         android:text="="
@@ -209,5 +203,5 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.75" />
+        app:layout_constraintGuide_percent="0.9" />
 </androidx.constraintlayout.widget.ConstraintLayout>
