@@ -1,3 +1,12 @@
 <resources>
     <string name="app_name">MyCalc</string>
+    <string name="btn_one">1</string>
+    <string name="btn_two">2</string>
+    <string name="btn_three">3</string>
+    <string name="btn_four">4</string>
+    <string name="btn_five">5</string>
+    <string name="btn_six">6</string>
+    <string name="btn_sum">+</string>
+    <string name="btn_result">=</string>
+    <string name="btn_del">C</string>
 </resources>

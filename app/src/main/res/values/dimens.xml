@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <dimen name="text_size">32sp</dimen>
     <dimen name="btn_layout_marginBottom">16dp</dimen>
+    <dimen name="btn_mid_layout_marginStartEnd">4dp</dimen>
+    <dimen name="btn_LeftAndRight_layout_marginStartEnd">8dp</dimen>
 </resources>
